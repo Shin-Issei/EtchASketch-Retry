@@ -1,10 +1,7 @@
 /* TODO: define grid container rules */
 
 /* TODO: Get a grid to display as many cells as you want in a defined space. */
-body{
-    display: flex;
-    justify-content: center;
-}
+
 .container {
     display: grid;
     border: 1px grey solid;
@@ -17,8 +14,8 @@ body{
 }
 
 .container > *{
-    border: 1px grey solid;
-    
-    /* min-width: 1fr;
-    min-height: 1fr; */
+    border: 1px grey dotted;
+    min-width: 1fr;
+    min-height: 1fr;
 }
+
