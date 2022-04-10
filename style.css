@@ -3,24 +3,23 @@
 /* TODO: Get a grid to display as many cells as you want in a defined space. */
 
 .container {
-    display: grid;
-    border: 1px grey solid;
-    width: 700px;
-    height: 700px;
-    /* grid-template-columns: repeat(3,1fr) ; /* This will be parameterized via the function in JS */
-    /* grid-template-rows: repeat(3, 1fr) ; */
-    /* height: 500px; */
-    /* justify-content: center; */
+  display: grid;
+  border: 1px grey solid;
+  width: 700px;
+  height: 700px;
+  /* grid-template-columns: repeat(3,1fr) ; /* This will be parameterized via the function in JS */
+  /* grid-template-rows: repeat(3, 1fr) ; */
+  /* height: 500px; */
+  /* justify-content: center; */
 }
 
-.container > *{
-    border: 1px grey dotted;
-    min-width: 1fr;
-    min-height: 1fr;
+.container > * {
+  border: 1px grey dotted;
+  min-width: 1fr;
+  min-height: 1fr;
 }
 
 .grid-hover {
-    /* This class will be added to the grid items in .container when moused over. */
-    background-color: #000;
+  /* This class will be added to the grid items in .container when moused over. */
+  background-color: #000;
 }
-

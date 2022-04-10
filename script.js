@@ -7,10 +7,7 @@
 */
 
 // TODO: Create references to manipulate the DOM and add the function that will add the divs to .container [X]
-// TODO: Add the appropriate event listeners for the grid items to make them change color. Use the add.class method.[]
-
-// When the function is called and the grid items are created the styles of grid-tm-rs and -col will be added
-// according to the given arguments [DONE]
+// TODO: Add the appropriate event listeners for the grid items to make them change color. Use the add.class method.[x]
 
 const body = document.querySelector("body");
 const div = document.querySelector(".container");
@@ -21,7 +18,7 @@ btn.textContent = "Make New Grid  ";
 body.appendChild(btn);
 body.appendChild(Btnclear);
 btn.addEventListener("click", makeGrid);
-Btnclear.addEventListener("click", clear );
+Btnclear.addEventListener("click", clear);
 
 function Grid() {
   const newItem = document.createElement("div");
@@ -45,11 +42,9 @@ function makeGrid(size) {
   }
 }
 
-function clear () {
-  while(div.firstChild){
-   div.removeChild(div.firstChild);
+function clear() {
+  while (div.firstChild) {
+    div.removeChild(div.firstChild);
   }
   makeGrid();
 }
-
-
