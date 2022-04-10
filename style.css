@@ -5,8 +5,8 @@
 .container {
     display: grid;
     border: 1px grey solid;
-    width: 500px;
-    height: 500px;
+    width: 700px;
+    height: 700px;
     /* grid-template-columns: repeat(3,1fr) ; /* This will be parameterized via the function in JS */
     /* grid-template-rows: repeat(3, 1fr) ; */
     /* height: 500px; */
@@ -17,5 +17,10 @@
     border: 1px grey dotted;
     min-width: 1fr;
     min-height: 1fr;
+}
+
+.grid-hover {
+    /* This class will be added to the grid items in .container when moused over. */
+    background-color: #000;
 }
 

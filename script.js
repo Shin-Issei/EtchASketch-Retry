@@ -6,35 +6,40 @@
         3. There will be an onpage input field to get the user defined grid size.
 */
 
-// TODO: Create references to manipulate the DOM and add the function that will add the divs to .container
-
-// The grid items style rules are defined by the function that creates them.
+// TODO: Create references to manipulate the DOM and add the function that will add the divs to .container [X]
+// TODO: Add the appropriate event listeners for the grid items to make them change color. Use the add.class method.[]
 
 // When the function is called and the grid items are created the styles of grid-tm-rs and -col will be added
 // according to the given arguments [DONE]
 
 const body = document.querySelector("body");
-const div = document.querySelector('.container');
+const div = document.querySelector(".container");
 const btn = document.createElement("button");
-btn.textContent = "Make New Grid";
+const clear = document.createElement("button");
+clear.textContent = "Clear";
+btn.textContent = "Make New Grid  ";
 body.appendChild(btn);
 
-function Grid (){
-    const newItem = document.createElement("div");
-    
-    div.appendChild(newItem);
-    
-    
+function Grid() {
+  const newItem = document.createElement("div");
+  newItem.addEventListener("mouseover", () => {
+    newItem.classList.add("grid-hover");
+  });
+  div.appendChild(newItem);
 }
 
-function makeGrid (size)  {
-    div.setAttribute('style', `grid-template-columns: repeat(${size},1fr); 
-    grid-template-rows: repeat(${size},1fr`);
-    let i = 0;
-    while (i < size * size) {
-      Grid();
-      i++;
-    }
+function makeGrid(size) {
+  size = Number(prompt("Type a grid size"));
+  div.setAttribute(
+    "style",
+    `grid-template-columns: repeat(${size},1fr); 
+    grid-template-rows: repeat(${size},1fr`
+  );
+  let i = 0;
+  while (i < size * size) {
+    Grid();
+    i++;
   }
+}
 
-btn.addEventListener("click", makeGrid (Number(prompt("Type a grid size"))));
+btn.addEventListener("click", makeGrid);
