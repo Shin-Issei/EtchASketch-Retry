@@ -15,10 +15,13 @@
 const body = document.querySelector("body");
 const div = document.querySelector(".container");
 const btn = document.createElement("button");
-const clear = document.createElement("button");
-clear.textContent = "Clear";
+const Btnclear = document.createElement("button");
+Btnclear.textContent = "Clear";
 btn.textContent = "Make New Grid  ";
 body.appendChild(btn);
+body.appendChild(Btnclear);
+btn.addEventListener("click", makeGrid);
+Btnclear.addEventListener("click", clear );
 
 function Grid() {
   const newItem = document.createElement("div");
@@ -42,4 +45,11 @@ function makeGrid(size) {
   }
 }
 
-btn.addEventListener("click", makeGrid);
+function clear () {
+  while(div.firstChild){
+   div.removeChild(div.firstChild);
+  }
+  makeGrid();
+}
+
+
